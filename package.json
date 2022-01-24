@@ -8,6 +8,8 @@
     "@types/react": "^17.0.38",
     "@types/react-dom": "^17.0.11",
     "axios": "^0.25.0",
+    "class-transformer": "^0.5.1",
+    "class-validator": "^0.13.2",
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
     "react-scripts": "^5.0.0",
@@ -15,13 +17,25 @@
   },
   "scripts": {
     "dev": "react-scripts start",
-    "build": "react-scripts build",
-    "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "prepare": "husky install",
+    "build": "npm run build:staging",
+    "build:staging": "env-cmd -f .env.staging next build",
+    "build:production": "env-cmd -f .env.production next build",
+    "start:staging": "env-cmd -f .env.staging next start",
+    "start:production": "env-cmd -f .env.production next start",
+    "lint": "next lint",
+    "check-types": "tsc --pretty --noEmit",
+    "check-format": "prettier --check .",
+    "check-lint": "eslint . --ext ts --ext tsx --ext js",
+    "format": "prettier --write .",
+    "test": "npm run check-format && npm run check-lint && npm run check-types",
+    "test-all": "npm run test && npm run build"
   },
   "devDependencies": {
     "@typescript-eslint/eslint-plugin": "^5.10.0",
     "@typescript-eslint/parser": "^5.10.0",
+    "env-cmd": "^10.1.0",
     "eslint": "^8.7.0",
     "eslint-config-airbnb": "^19.0.4",
     "eslint-config-airbnb-typescript": "^16.1.0",
@@ -30,6 +44,7 @@
     "eslint-plugin-jsx-a11y": "^6.5.1",
     "eslint-plugin-react": "^7.28.0",
     "eslint-plugin-react-hooks": "^4.3.0",
+    "husky": "^7.0.0",
     "prettier": "^2.5.1"
   },
   "browserslist": {
