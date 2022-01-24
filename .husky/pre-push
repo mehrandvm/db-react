@@ -5,7 +5,7 @@ echo '🤔🤔🤔🤔... Alright.... Code looks good to me... Trying to build n
 
 npm run build ||
 (
-    echo '❌👷🔨❌ Better call MohammadHossein... Because your build failed ❌👷🔨❌
+    echo '❌👷🔨❌ Better call Hessar... Because your build failed ❌👷🔨❌
             Next build failed: View the errors above to see why.
     '
     false;
