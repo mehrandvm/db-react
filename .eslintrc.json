@@ -1,10 +1,8 @@
 {
     "extends": [
         "plugin:react/recommended",
-        "airbnb"
-//        "airbnb-typescript",
-//        "prettier",
-//        "next/core-web-vitals"
+        "airbnb-typescript",
+        "prettier"
     ],
     "parser": "@typescript-eslint/parser",
     "parserOptions": {
@@ -14,8 +12,7 @@
     "rules": {
         "react/react-in-jsx-scope": "off",
         "import/extensions": "off",
-        "import/no-extraneous-dependencies": "off",
-        "@next/next/no-img-element": "error"
+        "import/no-extraneous-dependencies": "off"
     },
     "settings": {
         "react": {
