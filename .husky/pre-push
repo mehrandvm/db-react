@@ -1,12 +1,12 @@
 #!/bin/sh
 . "$(dirname "$0")/_/husky.sh"
 
-echo '🤔🤔🤔🤔... Alright.... Code looks good to me... Trying to build now before push. 🤔🤔🤔🤔'
+echo '🤔🤔🤔🤔 Trying to build your project before push. 🤔🤔🤔🤔'
 
 npm run build ||
 (
     echo '❌👷🔨❌ Better call Hessar... Because your build failed ❌👷🔨❌
-            Next build failed: View the errors above to see why.
+            React build failed: View the errors above to see why.
     '
     false;
 )
