@@ -1,4 +1,4 @@
-import { createTheme, responsiveFontSizes } from '@mui/material';
+import { PaletteMode } from '@mui/material';
 
 import KalamehThin from '../assets/fonts/Kalameh/KalamehWeb-Thin.woff';
 import KalamehExtraLight from '../assets/fonts/Kalameh/KalamehWeb-ExtraLight.woff';
@@ -10,34 +10,34 @@ import KalamehBold from '../assets/fonts/Kalameh/KalamehWeb-Bold.woff';
 import KalamehExtraBold from '../assets/fonts/Kalameh/KalamehWeb-ExtraBold.woff';
 import KalamehBlack from '../assets/fonts/Kalameh/KalamehWeb-Black.woff';
 
-export const theme = responsiveFontSizes(
-  createTheme({
-    typography: {
-      fontFamily: [
-        'Kalameh',
-        '-apple-system',
-        'BlinkMacSystemFont',
-        '"Segoe UI"',
-        'Roboto',
-        '"Helvetica Neue"',
-        'Arial',
-        'sans-serif',
-        '"Apple Color Emoji"',
-        '"Segoe UI Emoji"',
-        '"Segoe UI Symbol"',
-      ].join(','),
+export const returnTheme = (mode: PaletteMode) => ({
+  palette: {
+    mode,
+    primary: {
+      main: '#ceae80',
     },
-    palette: {
-      primary: {
-        main: '#ceae80',
-      },
-      secondary: {
-        main: '#007063',
-      },
+    secondary: {
+      main: '#007063',
     },
-    components: {
-      MuiCssBaseline: {
-        styleOverrides: `
+  },
+  typography: {
+    fontFamily: [
+      'Kalameh',
+      '-apple-system',
+      'BlinkMacSystemFont',
+      '"Segoe UI"',
+      'Roboto',
+      '"Helvetica Neue"',
+      'Arial',
+      'sans-serif',
+      '"Apple Color Emoji"',
+      '"Segoe UI Emoji"',
+      '"Segoe UI Symbol"',
+    ].join(','),
+  },
+  components: {
+    MuiCssBaseline: {
+      styleOverrides: `
         @font-face {
           font-family: 'Kalameh';
           font-style: normal;
@@ -119,23 +119,22 @@ export const theme = responsiveFontSizes(
           unicodeRange: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF;
         }
       `,
-      },
-      MuiTypography: {
-        defaultProps: {
-          variantMapping: {
-            h1: 'h2',
-            h2: 'h2',
-            h3: 'h2',
-            h4: 'h2',
-            h5: 'h2',
-            h6: 'h2',
-            subtitle1: 'h2',
-            subtitle2: 'h2',
-            body1: 'span',
-            body2: 'span',
-          },
+    },
+    MuiTypography: {
+      defaultProps: {
+        variantMapping: {
+          h1: 'h2',
+          h2: 'h2',
+          h3: 'h2',
+          h4: 'h2',
+          h5: 'h2',
+          h6: 'h2',
+          subtitle1: 'h2',
+          subtitle2: 'h2',
+          body1: 'span',
+          body2: 'span',
         },
       },
     },
-  })
-);
+  },
+});
