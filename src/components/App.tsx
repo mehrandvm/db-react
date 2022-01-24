@@ -1,8 +1,13 @@
 import React from 'react';
-import styles from '../styles/app.module.scss';
+import { LanguageProvider } from '../context/language';
+import Home from './home/Home';
 
 const App = () => {
-  return <div className={styles.app}>Hello, World!</div>;
+  return (
+    <LanguageProvider userLanguage={'fa'}>
+      <Home />
+    </LanguageProvider>
+  );
 };
 
 export default App;
