@@ -1,11 +1,13 @@
-import { createContext, FC, useMemo, useState } from 'react';
+import React, { createContext, FC, useMemo, useState } from 'react';
 import {
   createTheme,
+  CssBaseline,
   PaletteMode,
   responsiveFontSizes,
   ThemeProvider,
 } from '@mui/material';
 import { returnTheme } from '../../styles/theme';
+import { StylesProvider } from '@mui/styles';
 
 type ColorMode = 'light' | 'dark';
 
@@ -43,7 +45,12 @@ export const CustomThemeProvider: FC<LanguageProviderValue> = (props) => {
 
   return (
     <ThemeContext.Provider value={colorMode}>
-      <ThemeProvider theme={theme}>{props.children}</ThemeProvider>
+      <ThemeProvider theme={theme}>
+        <StylesProvider injectFirst>
+          <CssBaseline enableColorScheme />
+          {props.children}
+        </StylesProvider>
+      </ThemeProvider>
     </ThemeContext.Provider>
   );
 };
