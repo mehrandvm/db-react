@@ -16,9 +16,6 @@
     "isolatedModules": true,
     "noEmit": true,
     "jsx": "react-jsx",
-    "paths": {
-      "@components/*": ["src/components/*"]
-    },
     "experimentalDecorators": true,
     "strictPropertyInitialization": false
   },
