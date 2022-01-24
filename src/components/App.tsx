@@ -4,7 +4,7 @@ import Home from './home/Home';
 
 const App = () => {
   return (
-    <LanguageProvider userLanguage={'fa'}>
+    <LanguageProvider userLanguage="fa">
       <Home />
     </LanguageProvider>
   );
