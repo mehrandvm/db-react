@@ -1,22 +1,18 @@
 {
-    "extends": [
-        "plugin:react/recommended",
-        "airbnb-typescript",
-        "prettier"
-    ],
-    "parser": "@typescript-eslint/parser",
-    "parserOptions": {
-        "project": "./tsconfig.json"
-    },
-    "plugins": ["react", "@typescript-eslint"],
-    "rules": {
-        "react/react-in-jsx-scope": "off",
-        "import/extensions": "off",
-        "import/no-extraneous-dependencies": "off"
-    },
-    "settings": {
-        "react": {
-            "version": "latest"
-        }
+  "extends": ["plugin:react/recommended", "airbnb-typescript", "prettier"],
+  "parser": "@typescript-eslint/parser",
+  "parserOptions": {
+    "project": "./tsconfig.json"
+  },
+  "plugins": ["react", "@typescript-eslint"],
+  "rules": {
+    "react/react-in-jsx-scope": "off",
+    "import/extensions": "off",
+    "import/no-extraneous-dependencies": "off"
+  },
+  "settings": {
+    "react": {
+      "version": "latest"
     }
+  }
 }
