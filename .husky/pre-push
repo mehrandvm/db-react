@@ -1,0 +1,12 @@
+#!/bin/sh
+. "$(dirname "$0")/_/husky.sh"
+
+echo '🤔🤔🤔🤔... Alright.... Code looks good to me... Trying to build now before push. 🤔🤔🤔🤔'
+
+npm run build ||
+(
+    echo '❌👷🔨❌ Better call MohammadHossein... Because your build failed ❌👷🔨❌
+            Next build failed: View the errors above to see why.
+    '
+    false;
+)
