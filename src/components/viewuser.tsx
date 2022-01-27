@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import axiosInstance from '../apis/axiosConfig';
+import { TableCell, TableRow } from '@mui/material';
 
 const ViewUser = () => {
   const [data, setData] = useState<Array<{
@@ -17,11 +18,11 @@ const ViewUser = () => {
       {!data
         ? 'loading...'
         : data.map((item, i) => (
-            <tr key={i}>
-              <td>{item.user_id}</td>
-              <td>{item.full_name}</td>
-              <td>{item.phone_number}</td>
-            </tr>
+            <TableRow key={i}>
+              <TableCell>{item.user_id}</TableCell>
+              <TableCell>{item.full_name}</TableCell>
+              <TableCell>{item.phone_number}</TableCell>
+            </TableRow>
           ))}
     </div>
   );

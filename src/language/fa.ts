@@ -1,6 +1,6 @@
 const fa = {
   home: 'خانه',
-  netpardaz_panel: 'پنل نت پرداز',
+  netpardaz_panel: 'پنل',
   dashboard: 'داشبورد',
 };
 

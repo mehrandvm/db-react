@@ -1,4 +1,4 @@
-import { Button, TextField } from '@mui/material';
+import { Button, Stack, TextField } from '@mui/material';
 import React from 'react';
 import axiosInstance from '../apis/axiosConfig';
 
@@ -29,6 +29,7 @@ const Createuser = () => {
 
   return (
     <div>
+      <Stack />
       <TextField
         id="outlined-name"
         label="ID"
@@ -50,6 +51,7 @@ const Createuser = () => {
       <Button color="primary" variant="contained" onClick={submit}>
         {'Submit'}
       </Button>
+      <Stack />
     </div>
   );
 };
