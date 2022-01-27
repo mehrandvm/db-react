@@ -1,4 +1,4 @@
-import { PaletteMode } from '@mui/material';
+import { Direction, PaletteMode } from '@mui/material';
 
 import KalamehThin from '../assets/fonts/Kalameh/KalamehWeb-Thin.woff';
 import KalamehExtraLight from '../assets/fonts/Kalameh/KalamehWeb-ExtraLight.woff';
@@ -20,6 +20,7 @@ export const returnTheme = (mode: PaletteMode) => ({
       main: '#007063',
     },
   },
+  direction: 'rtl' as Direction,
   typography: {
     fontFamily: [
       'Kalameh',
